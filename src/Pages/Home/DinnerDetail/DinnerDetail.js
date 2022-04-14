@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
-import lunch1 from '../../../images/lunch/lunch1.png';
-import lunch2 from '../../../images/lunch/lunch2.png';
-import lunch3 from '../../../images/lunch/lunch3.png';
-import lunch4 from '../../../images/lunch/lunch4.png';
-import lunch5 from '../../../images/lunch/lunch5.png';
-import lunch6 from '../../../images/lunch/lunch6.png';
+import dinner1 from '../../../images/dinner/dinner1.png';
+import dinner2 from '../../../images/dinner/dinner2.png';
+import dinner3 from '../../../images/dinner/dinner3.png';
+import dinner4 from '../../../images/dinner/dinner4.png';
+import dinner5 from '../../../images/dinner/dinner5.png';
+import dinner6 from '../../../images/dinner/dinner6.png';
 
-
-const LunchDetail = () => {
+const DinnerDetail = () => {
     const images = [
-        lunch1,
-        lunch2,
-        lunch3,
-        lunch4,
-        lunch5,
-        lunch6,
+       dinner1,
+       dinner2,
+       dinner3,
+       dinner4,
+       dinner5,
+       dinner6,
         
      ];
-    const lunchs = [
-        {id: 1, img: lunch1, name:'Bangel and cream chess', price:6.99, },
-        {id: 2, img: lunch2, name:'BreakFast Sandwich', price:9.99, },
-        {id: 3, img: lunch3, name:'Chicken', price:10.99, },
-        {id: 4, img: lunch4, name:'Egg BreakFast', price:6.99, },
-        {id: 5, img: lunch5, name:'Toast Fired Egg', price:19.99, },
-        {id: 6, img: lunch6, name:'Full BreakFast fired Egg Toast Brunch', price:3.99, }
+    const dinners = [
+        {id: 1, img: dinner1, name:'Bangel and cream chess', price:6.99, },
+        {id: 2, img: dinner2, name:'BreakFast Sandwich', price:9.99, },
+        {id: 3, img: dinner3, name:'Chicken', price:10.99, },
+        {id: 4, img: dinner4, name:'Egg BreakFast', price:6.99, },
+        {id: 5, img: dinner5, name:'Toast Fired Egg', price:19.99, },
+        {id: 6, img: dinner6, name:'Full BreakFast fired Egg Toast Brunch', price:3.99, }
     ];
     const [index, setIndex] = useState(0);
     const next = () => {
@@ -35,14 +34,14 @@ const LunchDetail = () => {
     };
     const [count, setCount] = useState(0);
     let total = 0;
-    for (const food of lunchs) {
+    for (const food of dinners) {
         total = food.price * count;
     }
     return (
         <div>
             <div className='grid grid-cols-2  w-3/4 mx-auto items-center mt-12'>
                 <div>
-                    <h2 className='text-6xl'>Light Lunch</h2>
+                    <h2 className='text-6xl'>Light Dinner</h2>
                     <p className='mt-6 '>Gay one the what then she. Demesne mention promise you justice arrived way . Amazing foods are or and increasing to in especially companions acceptance admiration. Outweigh it families distance wandered ye.</p>
                     <div className='flex mt-4'>
                         <div className=' mr-8'>
@@ -59,7 +58,7 @@ const LunchDetail = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='hover:shadow-2xl rounded-full ml-12' src={lunch5} alt="" />
+                    <img className='hover:shadow-2xl rounded-full ml-12' src={dinner6} alt="" />
                 </div>
             </div>
             <div>
@@ -73,4 +72,4 @@ const LunchDetail = () => {
     );
 };
 
-export default LunchDetail;
+export default DinnerDetail;

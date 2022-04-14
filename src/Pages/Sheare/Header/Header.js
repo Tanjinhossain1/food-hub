@@ -13,7 +13,7 @@ const Header = () => {
                     </div>
                     <div >
                         <Link className='mr-12 font-semibold' to='/login'>Login</Link>
-                        <Link className='font-semibold mr-32' to='/signup'>Sign Up</Link>
+                        <Link className='font-semibold' to='/signup'>Sign Up</Link>
                     </div>
                 </div>
             </nav>
@@ -28,9 +28,9 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-          <div className='mt-[600px]'>
-              <Home></Home>
-          </div>
+         <div className='mt-[600px]'>
+             <Home></Home>
+         </div>
         </div>
     );
 };
