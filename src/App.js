@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import BreakFast from './Pages/Home/BreakFast/BreakFast';
 import Header from './Pages/Sheare/Header/Header';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
-        <Route path='/'></Route>
+        <Route path='/breakfast' element={<BreakFast></BreakFast>}></Route>
       </Routes>
     </div>
   );
