@@ -8,6 +8,7 @@ const SignUp = () => {
     // const [email, setEmail] = useState('');
     // const [password, setPassword] = useState('');
     // const [confirmPassword, setConfirmPassword] = useState('');
+    const [agree, setAgree] = useState(false);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -35,6 +36,7 @@ console.log(user)
        await updateProfile({ displayName: name });
 
     }
+    console.log(agree)
     return (
         <div>
             <div className='flex justify-center'>
@@ -42,12 +44,16 @@ console.log(user)
                     <h1 className='text-4xl'> Sign Up</h1>
                     <div className='w-50 mx-auto'>
                         <form onSubmit={handleSubmit}>
-                            <input className='block border p-4 w-[400px] mt-2 rounded-sm ' placeholder='Name' type="text" name="name" id="" />
+                            <input className='block border p-4 w-[400px] mt-2 rounded-sm ' placeholder='Name' type="text" name="name" id="" required/>
                             <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="email" name="email" placeholder='email' id="" required/>
                             <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="password" name='password' placeholder='Password' required/>
                             <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="password" name='confirm' placeholder='Confirm-Password' required/>
                             <p>Already Have an Account? <Link className='text-blue-600' to='/login '>Login</Link></p>
-                            <input className=' bg-red-500 text-white font-semibold block border p-4 w-[400px] mt-2 rounded-sm ' type="submit" name='Sign Up' value='Sign Up' />
+                           <div>
+                           <input onClick={()=>setAgree(!agree)}  type="checkbox" name="terms" value='Accept All Conditions' id="" />
+                           <label className={`ml-2 ${agree? 'text-green-800':'text-red-500'}`} htmlFor="terms">Accept All Conditions</label>
+                           </div>
+                            <input disabled={!agree} className={` bg-red-500 text-white font-semibold block border p-4 w-[400px] mt-2 rounded-sm'${agree?'bg-red-500 text-white':'bg-slate-400 text-gray-700'}`} type="submit" name='Sign Up' value='Sign Up' />
                         </form>
 
                     </div>
