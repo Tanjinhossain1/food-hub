@@ -11,8 +11,6 @@ import Login from './Pages/Login/Login/Login';
 import SignUp from './Pages/Login/SignUp/SignUp';
 import Footer from './Pages/Sheare/Footer/Footer';
 import Header from './Pages/Sheare/Header/Header';
-import Shef from './Pages/Sheare/Shef/Shef';
-import Test from './Pages/Test/Test';
 
 function App() {
   return (
