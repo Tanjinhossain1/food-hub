@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
@@ -12,6 +12,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     let location = useLocation();
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
 
 
     let from = location.state?.from?.pathname || "/";
@@ -41,7 +42,9 @@ const Login = () => {
                                 <input className=' bg-red-500 text-white font-semibold block border p-4 w-[400px] mt-2 rounded-sm ' type="submit" name='Login' value='Login' placeholder='Confirm-Password' />
                             </div>
                         </form>
-
+                        <div>
+                                <button onClick={()=>signInWithGoogle()} className=' text-xl border rounded-full py-2 px-6 w-[300px] mx-auto mt-4 bg-blue-500 text-white font-semibold'> <img width={60}className='rounded-full inline mr-4' src="https://e7.pngegg.com/pngimages/337/722/png-clipart-google-search-google-account-google-s-google-play-google-company-text.png" alt="" /> Google Sign In</button>
+                            </div>
                     </div>
 
                 </div>

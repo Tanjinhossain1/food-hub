@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 
 const SignUp = () => {
     // const [email, setEmail] = useState('');
@@ -14,6 +14,8 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+
     const [updateProfile, updating] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
@@ -61,7 +63,9 @@ console.log(user)
                            </div>
                             <input disabled={!agree} className={` bg-red-500 text-white font-semibold block border p-4 w-[400px] mt-2 rounded-sm'${agree?'bg-red-500 text-white':'bg-slate-400 text-gray-700'}`} type="submit" name='Sign Up' value='Sign Up' />
                         </form>
-
+                            <div>
+                                <button onClick={()=>signInWithGoogle()} className=' text-xl border rounded-full py-2 px-6 w-[300px] mx-auto mt-4 bg-blue-500 text-white font-semibold'> <img width={60}className='rounded-full inline mr-4' src="https://e7.pngegg.com/pngimages/337/722/png-clipart-google-search-google-account-google-s-google-play-google-company-text.png" alt="" /> Google Sign In</button>
+                            </div>
                     </div>
 
                 </div>
