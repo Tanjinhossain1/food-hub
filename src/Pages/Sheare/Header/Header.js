@@ -31,6 +31,7 @@ const Header = () => {
          <div className='mt-[600px]'>
              <Home></Home>
          </div>
+        
         </div>
     );
 };

@@ -6,13 +6,16 @@ import Dinner from './Pages/Home/Denner/Dinner';
 import DinnerDetail from './Pages/Home/DinnerDetail/DinnerDetail';
 import Lunch from './Pages/Home/Lunch/Lunch';
 import LunchDetail from './Pages/Home/LunchDetail/LunchDetail';
+import Footer from './Pages/Sheare/Footer/Footer';
 import Header from './Pages/Sheare/Header/Header';
+import Shef from './Pages/Sheare/Shef/Shef';
 
 function App() {
   return (
     <div>
       <Header></Header>
       <Routes>
+        <Route path='/' element={<BreakFast></BreakFast>}></Route>
         <Route path='/breakfast' element={<BreakFast></BreakFast>}></Route>
         <Route path='/breakfastdetail' element={<BreakFastDetail></BreakFastDetail>}></Route>
         <Route path='/lunch' element={<Lunch></Lunch>}></Route>
@@ -20,6 +23,8 @@ function App() {
         <Route path='/dinner' element={<Dinner></Dinner>}></Route>
         <Route path='/dinnerdetail' element={<DinnerDetail></DinnerDetail>}></Route>
       </Routes>
+      <Shef></Shef>
+     <Footer></Footer>
     </div>
   );
 }
