@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import banner from '../../../images/bannerbackground.png';
+import Shef from '../../Sheare/Shef/Shef';
 
 const Home = () => {
     return (

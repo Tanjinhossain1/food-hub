@@ -10,6 +10,7 @@ import Lunch from './Pages/Home/Lunch/Lunch';
 import LunchDetail from './Pages/Home/LunchDetail/LunchDetail';
 import Login from './Pages/Login/Login/Login';
 import SignUp from './Pages/Login/SignUp/SignUp';
+import Proceed from './Pages/Proceed/Proceed';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Footer from './Pages/Sheare/Footer/Footer';
 import Header from './Pages/Sheare/Header/Header';
@@ -19,12 +20,16 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
         <Route path='/' element={<BreakFast></BreakFast>}></Route>
+        {/* <Route path='/' element={<Home></Home>}></Route> */}
         <Route path='/home' element={<BreakFast></BreakFast>}></Route>
 
         <Route path='/breakfast' element={<BreakFast></BreakFast>}></Route>
-
+        <Route path='/proceed' element={
+          <RequireAuth>
+            <Proceed></Proceed>
+          </RequireAuth>
+        }></Route>
 
         <Route path='/breakfastdetail' element={
           <RequireAuth>

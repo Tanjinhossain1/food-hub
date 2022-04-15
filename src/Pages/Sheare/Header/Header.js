@@ -20,7 +20,7 @@ const Header = () => {
                     <div>
                         <NavLink  className={({isActive})=>isActive?'text-orange-500 font-semibold text-2xl mr-12 ':'text-2xl mr-12 font-semibold'} to='/home'>Home</NavLink>
 
-                        {user ? <button onClick={logout} className='mr-12 font-semibold'>Log Out</button> :
+                        {user ? <button onClick={logout} className='mr-12 text-2xl font-semibold'>Log Out</button> :
                             <NavLink  className={({isActive})=>isActive?'text-orange-500 font-semibold text-2xl mr-12 ':'text-2xl mr-12 font-semibold'} to='/login'>Login</NavLink>}
                         <NavLink  className={({isActive})=>isActive?'text-orange-500 font-semibold text-2xl mr-12 ':'text-2xl mr-12 font-semibold'} to='/signup'>Sign Up</NavLink>
                     </div>
