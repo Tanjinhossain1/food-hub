@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import banner from '../../../images/bannerbackground.png';
-import Shef from '../../Sheare/Shef/Shef';
 
 const Home = () => {
     return (
@@ -19,9 +18,12 @@ const Home = () => {
             </div>
 
             <div  className=' text-center mt-[600px]' >
-                <Link className='text-3xl mr-12' to='/breakfast'>BreakFast</Link>
-                <Link className='text-3xl' to='/lunch'>Lunch</Link>
-                <Link className='text-3xl ml-12' to='/dinner'>Dinner</Link>
+                <NavLink className={({isActive})=>isActive?'text-orange-500 text-3xl mr-12 ':'text-3xl mr-12'} to='/breakfast'>BreakFast</NavLink>
+
+                <NavLink className={({isActive})=>isActive?'text-orange-500 text-3xl mr-12 ':'text-3xl mr-12'} to='/lunch'>Lunch</NavLink>
+
+                <NavLink className={({isActive})=>isActive?'text-orange-500 text-3xl mr-12 ':'text-3xl mr-12'} to='/Dinner'>Dinner</NavLink>
+
             </div>
            
         </div>

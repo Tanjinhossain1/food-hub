@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import BreakFast from './Pages/Home/BreakFast/BreakFast';
 import BreakFastDetail from './Pages/Home/BreakFastDetail/BreakFastDetail';
+import BuyBreakFast from './Pages/Home/BuyBreakFast/BuyBreakFast';
 import Dinner from './Pages/Home/Denner/Dinner';
 import DinnerDetail from './Pages/Home/DinnerDetail/DinnerDetail';
 import Home from './Pages/Home/Home/Home';
@@ -45,6 +46,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/buybreakfast' element={<BuyBreakFast></BuyBreakFast>}></Route>
       </Routes>
 
       <Footer></Footer>

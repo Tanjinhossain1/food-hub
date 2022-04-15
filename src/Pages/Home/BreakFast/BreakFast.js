@@ -28,6 +28,10 @@ const BreakFast = () => {
            <div className='text-center'>
            <button onClick={() => navigate('/breakfastdetail')} className='border py-4 px-7 bg-blue-600 text-white font-bold mb-12 text-xl'>CheckOut your Food</button>
            </div>
+
+           <div className='text-center'>
+           <button onClick={() => navigate('/buybreakfast')} className='border py-4 px-7 bg-blue-600 text-white font-bold mb-12 text-xl rounded-full'>Buy Now</button>
+           </div>
            <Shef></Shef>
         </div>
     );

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { async } from '@firebase/util';
 
 const SignUp = () => {
     // const [email, setEmail] = useState('');
@@ -36,6 +35,8 @@ console.log(user)
        await updateProfile({ displayName: name });
 
     }
+    const [visible, setVisible] = useState(false);
+
     console.log(agree)
     return (
         <div>
@@ -46,8 +47,13 @@ console.log(user)
                         <form onSubmit={handleSubmit}>
                             <input className='block border p-4 w-[400px] mt-2 rounded-sm ' placeholder='Name' type="text" name="name" id="" required/>
                             <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="email" name="email" placeholder='email' id="" required/>
-                            <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="password" name='password' placeholder='Password' required/>
-                            <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="password" name='confirm' placeholder='Confirm-Password' required/>
+
+                            <button onClick={()=>setVisible(!visible)} >show password</button>
+                            <input className='block border p-4 w-[400px] mt-2 rounded-sm '  type= {visible ? "text" : "password"}  name='password' placeholder='Password' required/>
+
+
+                            <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type={visible ? "text" : "password"} name='confirm' placeholder='Confirm-Password' required/>
+
                             <p>Already Have an Account? <Link className='text-blue-600' to='/login '>Login</Link></p>
                            <div>
                            <input onClick={()=>setAgree(!agree)}  type="checkbox" name="terms" value='Accept All Conditions' id="" />
