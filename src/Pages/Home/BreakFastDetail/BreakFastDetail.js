@@ -59,7 +59,8 @@ const BreakFastDetail = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='hover:shadow-2xl rounded-full ml-12' src={breakFast4} alt="" />
+                    {/* <img className='hover:shadow-2xl rounded-full ml-12' src={breakFast4} alt="" /> */}
+                    <img className='hover:shadow-2xl rounded-full' src={images[index]} alt="" />
                 </div>
             </div>
             <div>

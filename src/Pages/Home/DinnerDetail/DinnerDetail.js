@@ -58,7 +58,8 @@ const DinnerDetail = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='hover:shadow-2xl rounded-full ml-12' src={dinner6} alt="" />
+                    {/* <img className='hover:shadow-2xl rounded-full ml-12' src={dinner6} alt="" /> */}
+                    <img className='hover:shadow-2xl rounded-full' src={images[index]} alt="" />
                 </div>
             </div>
             <div>
