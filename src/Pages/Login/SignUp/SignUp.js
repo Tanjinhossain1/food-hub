@@ -39,7 +39,7 @@ console.log(user)
         <div>
             <div className='flex justify-center'>
                 <div>
-                    <h1> Sign Up</h1>
+                    <h1 className='text-4xl'> Sign Up</h1>
                     <div className='w-50 mx-auto'>
                         <form onSubmit={handleSubmit}>
                             <input className='block border p-4 w-[400px] mt-2 rounded-sm ' placeholder='Name' type="text" name="name" id="" />
