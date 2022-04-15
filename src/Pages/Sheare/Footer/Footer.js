@@ -3,8 +3,9 @@ import headerLogo from '../../../images/logo2.png'
 
 const Footer = () => {
     return (
-        <div className='mt-32'>
-            <div>
+        <div >
+              
+            <div className='mt-64'>
                 <div className='bg-black pt-4 grid grid-cols-2'>
                     <div>
                         <div className='mb-12 ml-32'>

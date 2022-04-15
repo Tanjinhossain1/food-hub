@@ -17,10 +17,13 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
         <Route path='/' element={<BreakFast></BreakFast>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/home' element={<BreakFast></BreakFast>}></Route>
+
         <Route path='/breakfast' element={<BreakFast></BreakFast>}></Route>
+       
+
         <Route path='/breakfastdetail' element={<BreakFastDetail></BreakFastDetail>}></Route>
         <Route path='/lunch' element={<Lunch></Lunch>}></Route>
         <Route path='/lunchdetail' element={<LunchDetail></LunchDetail>}></Route>

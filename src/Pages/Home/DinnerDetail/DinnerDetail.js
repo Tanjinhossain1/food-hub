@@ -5,6 +5,8 @@ import dinner3 from '../../../images/dinner/dinner3.png';
 import dinner4 from '../../../images/dinner/dinner4.png';
 import dinner5 from '../../../images/dinner/dinner5.png';
 import dinner6 from '../../../images/dinner/dinner6.png';
+import Shef from '../../Sheare/Shef/Shef';
+import Home from '../Home/Home';
 
 const DinnerDetail = () => {
     const images = [
@@ -39,6 +41,7 @@ const DinnerDetail = () => {
     }
     return (
         <div>
+                <Home></Home>
             <div className='grid grid-cols-2  w-3/4 mx-auto items-center mt-12'>
                 <div>
                     <h2 className='text-6xl'>Light Dinner</h2>
@@ -69,6 +72,7 @@ const DinnerDetail = () => {
                     <button onClick={next}>&gt;</button>
                 </div>
             </div>
+            <Shef></Shef>
         </div>
     );
 };

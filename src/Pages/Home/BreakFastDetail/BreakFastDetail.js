@@ -5,6 +5,8 @@ import breakFast3 from '../../../images/breakfast/breakfast3.png';
 import breakFast4 from '../../../images/breakfast/breakfast4.png';
 import breakFast5 from '../../../images/breakfast/breakfast5.png';
 import breakFast6 from '../../../images/breakfast/breakfast6.png';
+import Shef from '../../Sheare/Shef/Shef';
+import Home from '../Home/Home';
 
 
 const BreakFastDetail = () => {
@@ -40,6 +42,7 @@ const BreakFastDetail = () => {
 
     return (
         <div>
+                <Home></Home>
             <div className='grid grid-cols-2  w-3/4 mx-auto items-center mt-12'>
                 <div>
                     <h2 className='text-6xl'>Light BreakFast</h2>
@@ -70,6 +73,7 @@ const BreakFastDetail = () => {
                     <button onClick={next}>&gt;</button>
                 </div>
             </div>
+            <Shef></Shef>
         </div>
     );
 };

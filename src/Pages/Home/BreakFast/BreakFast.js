@@ -6,6 +6,8 @@ import breakFast3 from '../../../images/breakfast/breakfast3.png';
 import breakFast4 from '../../../images/breakfast/breakfast4.png';
 import breakFast5 from '../../../images/breakfast/breakfast5.png';
 import breakFast6 from '../../../images/breakfast/breakfast6.png';
+import Shef from '../../Sheare/Shef/Shef';
+import Home from '../Home/Home';
 
 const BreakFast = () => {
     const breakFasts = [
@@ -19,12 +21,14 @@ const BreakFast = () => {
     const navigate = useNavigate();
     return (
         <div>
+            <Home></Home>
             <div className='grid grid-cols-3 '>
                 {breakFasts.map(breakFast => <TodayBreakFast breakFast={breakFast} key={breakFast.id}></TodayBreakFast>)}
             </div>
            <div className='text-center'>
            <button onClick={() => navigate('/breakfastdetail')} className='border py-4 px-7 bg-blue-600 text-white font-bold mb-12 text-xl'>CheckOut your Food</button>
            </div>
+           <Shef></Shef>
         </div>
     );
 };

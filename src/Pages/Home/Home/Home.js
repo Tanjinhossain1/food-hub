@@ -23,7 +23,7 @@ const Home = () => {
                 <Link className='text-3xl' to='/lunch'>Lunch</Link>
                 <Link className='text-3xl ml-12' to='/dinner'>Dinner</Link>
             </div>
-            <Shef></Shef>
+           
         </div>
     );
 };

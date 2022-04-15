@@ -5,9 +5,9 @@ const Login = () => {
     return (
         <div>
       <div>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-12'>
                 <div>
-                    <h1>Login</h1>
+                    <h1 className='text-4xl'>Login</h1>
                     <div className='w-50 mx-auto'>
                         <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="email" name="email" placeholder='email' id="" />
                         <input className='block border p-4 w-[400px] mt-2 rounded-sm ' type="password" name='password' placeholder='Password' />

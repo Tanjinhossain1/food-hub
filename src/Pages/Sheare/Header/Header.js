@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import headerLogo from '../../../images/logo2.png'
+import Shef from '../Shef/Shef';
 const Header = () => {
     return (
         <div>
@@ -21,6 +22,7 @@ const Header = () => {
          {/* <div className='mt-[600px]'>
              <Home></Home>
          </div> */}
+        
         </div>
     );
 };

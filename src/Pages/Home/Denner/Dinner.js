@@ -6,6 +6,8 @@ import dinner3 from '../../../images/dinner/dinner3.png';
 import dinner4 from '../../../images/dinner/dinner4.png';
 import dinner5 from '../../../images/dinner/dinner5.png';
 import dinner6 from '../../../images/dinner/dinner6.png';
+import Shef from '../../Sheare/Shef/Shef';
+import Home from '../Home/Home';
 
 const Dinner = () => {
     const dinners = [
@@ -21,12 +23,14 @@ const Dinner = () => {
     return (
     
             <div>
+                <Home></Home>
                 <div className='grid grid-cols-3 '>
                     {dinners.map(dinner => <TodayDinner dinner={dinner} key={dinner.id}></TodayDinner>)}
                 </div>
                <div className='text-center'>
                <button onClick={() => navigate('/dinnerdetail')} className='border py-4 px-7 bg-blue-600 text-white font-bold mb-12 text-xl'>CheckOut your Food</button>
                </div>
+               <Shef></Shef>
             </div>
     );
 };
